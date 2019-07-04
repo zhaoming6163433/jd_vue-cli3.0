@@ -1,0 +1,148 @@
+/*表格样式*/
+body .el-table th.gutter{
+    display: table-cell!important;
+}
+.el-menu{
+    background-color:$menuback;
+    .el-menu-item{
+        color:$wihte_c;
+    }
+    .el-menu-item.is-active{
+        color:#409eff;
+    }
+    .el-submenu__title{
+        color:$wihte_c;
+    }
+    .el-submenu__title:hover{
+        background-color:$menuback;
+        color:#409eff;
+    }
+    .el-menu-item:focus, .el-menu-item:hover{
+        background-color:$menuback;
+        color:#409eff;
+    }
+}
+/*表格排序图标重写*/
+.el-table .sort-caret.ascending{
+    border-bottom-color: #c0c4cc;
+}
+.el-table .sort-caret{
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    position: absolute;
+    left: 7px;
+}
+.el-table .sort-caret.descending{
+    border-top-color: #c0c4cc;
+    bottom: -1px;
+}
+.sort-caret descending{
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    position: absolute;
+    left: 7px;
+}
+.el-table .descending .sort-caret.descending {
+    border-top-color: #237aff;
+}
+.el-table .ascending .sort-caret.ascending {
+    border-bottom-color: #237aff;
+}
+/*按钮*/
+.el-button--primary {
+    color: #fff;
+    background-color: #237aff;
+    border-color: #237aff;
+}
+.el-button--text {
+    border-color: transparent;
+    color: #237aff;
+    background: transparent;
+    padding-left: 0;
+    padding-right: 0;
+}
+/*dialog標題*/
+.el-dialog__header{
+    border-bottom: 1px solid #eff2f6;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+.el-dialog__headerbtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.el-dialog__title {
+    line-height: 24px;
+    font-size: 20px;
+    color: #303133;
+}
+.el-dialog{
+    min-width:800px;
+    overflow:auto;
+}
+.el-dialog__title{
+    font-size:18px;
+}
+/*tab*/
+.el-tabs__active-bar{
+    background-color:rgb(35, 122, 255);
+    height:4px;
+}
+.mytada {
+    -webkit-animation-name: mytada;
+    animation-name: mytada;
+}
+.el-input.is-disabled .el-input__inner,.el-textarea.is-disabled .el-textarea__inner{
+    color: $gray2;
+}
+.el-button--primary:focus{
+    background: #237aff;
+    border-color:#66b1ff;
+}
+.el-button--primary:hover{
+    background: #66b1ff;
+    border-color:#66b1ff;
+}
+@keyframes mytada{
+    0% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+    3%, 5% {
+        -webkit-transform: scale(0.9) rotate(-3deg);
+        -ms-transform: scale(0.9) rotate(-3deg);
+        transform: scale(0.9) rotate(-3deg);
+    }
+
+    7%, 13%, 17%, 23% {
+        -webkit-transform: scale(1.1) rotate(3deg);
+        -ms-transform: scale(1.1) rotate(3deg);
+        transform: scale(1.1) rotate(3deg);
+    }
+
+    10%, 15%, 20% {
+        -webkit-transform: scale(1.1) rotate(-3deg);
+        -ms-transform: scale(1.1) rotate(-3deg);
+        transform: scale(1.1) rotate(-3deg);
+    }
+
+    25% {
+        -webkit-transform: scale(1) rotate(0);
+        -ms-transform: scale(1) rotate(0);
+        transform: scale(1) rotate(0);
+    }
+}
+.el-tabs__nav-wrap::after{
+    background-color: #f1f1f1;
+    height: 1px;
+}
